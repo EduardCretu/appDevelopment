@@ -1,25 +1,60 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image, useColorScheme } from 'react-native'
 import {Link} from 'expo-router'
 import Logo from '../assets/img/ciggy.jpg'
 import React from 'react'
+//import {colors} from '../constants/colors'
+
+//themed components
+import ThemedView from '../components/ThemedView'
+import ThemedText from '../components/ThemedText'
+import ThemedCard from '../components/ThemedCard'
+import ThemedLogo from '../components/ThemedLogo'
+import Spacer from '../components/Spacer'
+
 
 
 const index = () => {
+  //const colorScheme = useColorScheme()
+  //const theme = colors[colorScheme] ?? colors.light
+  
   return (
-    <View style={styles.container}>
-        <Image source={Logo} style={styles.logo}/>
-      <Text style={styles.title}>WebDev but for apps</Text>
-      <Text style={{color:'red'}}>John & Leftheris</Text>
-      <Text>&gt;:&#x29;</Text>
-      <View style={styles.card}>
-        <Text style={{color:'white'}}>
-            Amerika ya :D!!!
-        </Text>
-      </View>
-      <Link href='/about' style={[styles.link,{color:'white'}]}> CLICK ME</Link>
-      <Link href='/contact' style={[styles.link,{color:'white'}]}> CLICK ME</Link>
+    <ThemedView style={styles.container}>
 
-    </View>
+        <ThemedLogo style={styles.logo}/>
+
+      <ThemedText title={true} style={styles.title}>
+        WebDev but for apps
+      </ThemedText>
+
+      <ThemedText style={{color:'red'}}>
+        John & Leftheris
+      </ThemedText>
+
+      <ThemedText style={{fontWeight: 'bold'}}>
+        &gt;:&#x29;
+      </ThemedText>
+
+      <ThemedText>
+          Amerika ya :D!!!
+      </ThemedText>
+
+      <Spacer></Spacer>
+
+      <ThemedCard>
+        <Link href='/about'>
+          <ThemedText>CLICK ME</ThemedText>
+        </Link>
+      </ThemedCard>
+      
+      <Spacer height={10}></Spacer>
+
+      <ThemedCard>
+        <Link href='/contact'>
+          <ThemedText>CLICK ME</ThemedText>
+        </Link>
+      </ThemedCard>
+
+    </ThemedView>
   )
 }
 
@@ -30,29 +65,16 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'rgba(51, 51, 51, 1)'
 
     },
     title: {
+        margin: 5,
         fontWeight: 'bold',
         fontSize: 20,
-    },
-    card: {
-        margin: 5,
-        padding: 20,
-        borderRadius: 5,
-        boxShadow: '5px 5px 5px rgba(0,0,0,0.2)',
-        backgroundColor: '#727272ff',
-        color: '#ffffff'
     },
     logo: {
         height: 100,
         width: 100,
         borderRadius: 15
-    },
-    link: {
-        marginVertical: 10,
-        borderBottomWidth: 1,
-        borderColor: 'white'
     }
 })

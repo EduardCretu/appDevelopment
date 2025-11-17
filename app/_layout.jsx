@@ -13,11 +13,12 @@ const RootLayout = () => {
             headerShown:false,
             headerStyle: {backgroundColor: theme.navBackground},
             headerTintColor: theme.title,
-            headerTitleStyle: {color: 'white', }
+            headerTitleStyle: {color: theme.title},
+            headerTitleAlign: 'center'
         }}> 
             <Stack.Screen name="index" options={{title: 'Home', headerShown: true}}></Stack.Screen>
             <Stack.Screen name="about" options={{title: 'About', headerShown: true}}></Stack.Screen>
-            <Stack.Screen name="contact" options={{title: 'Contact Us'}}></Stack.Screen>
+            <Stack.Screen name="contact" options={{title: 'Contact Us', headerShown: true}}></Stack.Screen>
         </Stack>
     </>  
   )
