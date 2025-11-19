@@ -12,6 +12,7 @@
     "@react-native-community/cli": "latest"
   },
   "dependencies": {
+    "@expo/vector-icons": "^15.0.3",
     "eas-cli": "^16.27.0",
     "expo": "~54.0.23",
     "expo-constants": "~18.0.10",

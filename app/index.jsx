@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, Image, useColorScheme } from 'react-native'
 import {Link} from 'expo-router'
 import Logo from '../assets/img/ciggy.jpg'
 import React from 'react'
-//import {colors} from '../constants/colors'
+import {colors} from '../constants/colors'
 
 //themed components
 import ThemedView from '../components/ThemedView'
@@ -39,20 +39,29 @@ const index = () => {
       </ThemedText>
 
       <Spacer></Spacer>
-
-      <ThemedCard>
-        <Link href='/login'>
-          <ThemedText>Log in</ThemedText>
-        </Link>
-      </ThemedCard>
+      
+      <Link href='/login'>
+        <ThemedCard style={styles.card}>
+            <ThemedText style={styles.cardText}>Log in</ThemedText>  
+        </ThemedCard>
+      </Link>
       
       <Spacer height={10}></Spacer>
 
-      <ThemedCard>
-        <Link href='/register'>
-          <ThemedText>Register</ThemedText>
-        </Link>
-      </ThemedCard>
+      <Link href='/login'>
+        <ThemedCard style={styles.card}>
+            <ThemedText style={styles.cardText}>Register</ThemedText>  
+        </ThemedCard>
+      </Link>
+
+      <Spacer height={10}></Spacer>
+
+      <Link href='/profile'>
+        <ThemedCard style={styles.card}>
+            <ThemedText style={styles.cardText}>Profile</ThemedText>  
+        </ThemedCard>
+      </Link>
+
 
     </ThemedView>
   )
@@ -76,5 +85,16 @@ const styles = StyleSheet.create({
         height: 100,
         width: 100,
         borderRadius: 15
+    },
+    card: {
+      width: 150,
+      height: 60,
+      alignItems: 'center',
+      backgroundColor: colors.primary
+    },
+    cardText: {
+      fontWeight: 'bold',
+      fontSize: 15,
+      color: 'white'
     }
 })

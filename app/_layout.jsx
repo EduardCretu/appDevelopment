@@ -1,7 +1,7 @@
 import { StatusBar, StyleSheet, useColorScheme } from 'react-native'
-import React from 'react'
 import { Stack } from 'expo-router'
 import {colors} from '../constants/colors'
+
 
 const RootLayout = () => {
     const colorScheme = useColorScheme()
@@ -10,14 +10,16 @@ const RootLayout = () => {
     <>
         <StatusBar value='auto' hidden></StatusBar>
         <Stack screenOptions={{
-            headerShown:true,
+            headerShown: false,
             headerStyle: {backgroundColor: theme.navBackground},
             headerTintColor: theme.title,
             headerTitleStyle: {color: theme.title},
             headerTitleAlign: 'center'
         }}> 
-            <Stack.Screen name='(auth)' options={{headerShown:false}}/>
+            
             <Stack.Screen name="index" options={{title: 'Home', headerShown: true}}/>
+            <Stack.Screen name="(auth)" options={{headerShown:false}}/>
+            <Stack.Screem name="(dashboard)" options={{headerShown:false}}/>
         </Stack>
     </>  
   )
