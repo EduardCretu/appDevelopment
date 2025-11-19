@@ -1,6 +1,6 @@
-import { StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native'
+import { StatusBar, StyleSheet, useColorScheme } from 'react-native'
 import React from 'react'
-import { Slot, Stack } from 'expo-router'
+import { Stack } from 'expo-router'
 import {colors} from '../constants/colors'
 
 const RootLayout = () => {
@@ -10,15 +10,14 @@ const RootLayout = () => {
     <>
         <StatusBar value='auto' hidden></StatusBar>
         <Stack screenOptions={{
-            headerShown:false,
+            headerShown:true,
             headerStyle: {backgroundColor: theme.navBackground},
             headerTintColor: theme.title,
             headerTitleStyle: {color: theme.title},
             headerTitleAlign: 'center'
         }}> 
-            <Stack.Screen name="index" options={{title: 'Home', headerShown: true}}></Stack.Screen>
-            <Stack.Screen name="about" options={{title: 'About', headerShown: true}}></Stack.Screen>
-            <Stack.Screen name="contact" options={{title: 'Contact Us', headerShown: true}}></Stack.Screen>
+            <Stack.Screen name='(auth)' options={{headerShown:false}}/>
+            <Stack.Screen name="index" options={{title: 'Home', headerShown: true}}/>
         </Stack>
     </>  
   )

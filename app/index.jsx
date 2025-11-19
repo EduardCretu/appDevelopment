@@ -41,16 +41,16 @@ const index = () => {
       <Spacer></Spacer>
 
       <ThemedCard>
-        <Link href='/about'>
-          <ThemedText>CLICK ME</ThemedText>
+        <Link href='/login'>
+          <ThemedText>Log in</ThemedText>
         </Link>
       </ThemedCard>
       
       <Spacer height={10}></Spacer>
 
       <ThemedCard>
-        <Link href='/contact'>
-          <ThemedText>CLICK ME</ThemedText>
+        <Link href='/register'>
+          <ThemedText>Register</ThemedText>
         </Link>
       </ThemedCard>
 
