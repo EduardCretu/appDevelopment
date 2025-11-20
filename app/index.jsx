@@ -27,7 +27,7 @@ const index = () => {
       </ThemedText>
 
       <ThemedText style={{color:'red'}}>
-        John & Leftheris
+        Microsoft hire me OR ELSE!!!
       </ThemedText>
 
       <ThemedText style={{fontWeight: 'bold'}}>
@@ -35,7 +35,7 @@ const index = () => {
       </ThemedText>
 
       <ThemedText>
-          Amerika ya :D!!!
+          Amerika ya :D !!!!
       </ThemedText>
 
       <Spacer></Spacer>
@@ -48,7 +48,7 @@ const index = () => {
       
       <Spacer height={10}></Spacer>
 
-      <Link href='/login'>
+      <Link href='/register'>
         <ThemedCard style={styles.card}>
             <ThemedText style={styles.cardText}>Register</ThemedText>  
         </ThemedCard>
