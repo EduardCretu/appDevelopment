@@ -18,6 +18,5 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         padding: 20,
         boxShadow: '1px 1px 5px rgba(0,0,0,0.2)',
-        
     }
 })

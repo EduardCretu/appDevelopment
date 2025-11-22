@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
       width: 150,
       height: 60,
       alignItems: 'center',
-      backgroundColor: colors.primary
+      backgroundColor: colors.primary,
     },
     cardText: {
       fontWeight: 'bold',
